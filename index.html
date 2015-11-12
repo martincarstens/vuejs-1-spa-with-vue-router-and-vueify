@@ -10,10 +10,6 @@
 <body>
 
 <div class="container">
-    <div id="nav">
-      <!-- {{hellothere}} -->
-    </div>
-
     <div id="app">
       <!-- Static navbar -->
         <nav class="navbar navbar-default">
@@ -29,15 +25,17 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li id="to-do"><a v-link="{ path: '/todo' }">To-Do</a></li>
-                <li id="new-page"><a v-link="{ path: '/newpage' }">New Page</a></li>
+                <li id="to-do"><a href="#" v-on:click="switchPage('todo')">To-Do</a></li>
+                <li id="new-page"><a href="#" v-on:click="switchPage('page1')">New Page</a></li>
               </ul>
 
             </div><!--/.nav-collapse -->
           </div><!--/.container-fluid -->
         </nav>
 
-      <router-view></router-view>
+        <component :is="currentView"></component>
+    
+
     </div>
 </div>
 <script src="bundle.js"></script>

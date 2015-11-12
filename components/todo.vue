@@ -68,6 +68,10 @@
 
 <script>
 
+$(window).on('hashchange', function(e){
+	console.log(window.location);
+})
+
 module.exports = {
 
 	data: function () {

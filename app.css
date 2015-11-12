@@ -2,6 +2,10 @@
     margin-top: 2em;
 }
 
+.navbar-nav a {
+	cursor: pointer;
+}
+
 li button {
     font-weight: bold;
     background: none;
